@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 ---
 ### Submitted Files
 
- 1. Provide a README that includes all the rubric points and how you addressed each one. You're reading it!
+ 1. README that includes all the rubric points and how you addressed each one. You're reading it!
  1. The [jupyter notebook](Traffic_Sign_Classifier.ipynb).
  1. [HTML output of the code](Traffic_Sign_Classifier.html)
 

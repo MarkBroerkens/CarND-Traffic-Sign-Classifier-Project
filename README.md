@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
+[bar_chart_training_set]: ./figues/bar_chart_training_set.png "Distribution of training samples per label"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
@@ -25,7 +25,6 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
----
 ### Submitted Files
 
  1. README that includes all the rubric points and how you addressed each one. You're reading it!
@@ -33,23 +32,18 @@ The goals / steps of this project are the following:
  1. [HTML output of the code](Traffic_Sign_Classifier.html)
 
 ### Data Set Summary & Exploration
-
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
-I used the pandas library to calculate summary statistics of the traffic
+I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is (32, 32, 3)
+* The number of unique classes/labels in the data set is 43
 
-#### 2. Include an exploratory visualization of the dataset.
+Here is an exploratory visualization of the data set. It is a bar chart showing how many samples are contained in the training set per label.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
-
-![alt text][image1]
+![alt text][bar_chart_training_set]
 
 ### Design and Test a Model Architecture
 

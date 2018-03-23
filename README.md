@@ -1,4 +1,4 @@
-# **CarND-Traffic-Sign-Classifier-Project**
+# **Traffic Sign Classifier Project**
 My Submission for the Udacity Traffic Sign Classifier Project
 
 
@@ -25,14 +25,12 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.
-
 ---
-### Writeup / README
+### Submitted Files
 
-#### 1. Provide a README that includes all the rubric points and how you addressed each one.
-
-You're reading it! and here is a link to my [project code](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). The html export is available here [html project code](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html)
+ 1. Provide a README that includes all the rubric points and how you addressed each one. You're reading it!
+ 1. The [jupyter notebook](Traffic_Sign_Classifier.ipynb).
+ 1. [HTML output of the code](Traffic_Sign_Classifier.html)
 
 ### Data Set Summary & Exploration
 

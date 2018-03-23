@@ -15,7 +15,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./figues/bar_chart_training_set.png "Distribution of training samples per label"
+[bar_chart_training_set]: ./figures/bar_chart_training_set.png "Distribution of training samples per label"
+[labels_with_examples]: ./figures/labels_with_examples.png "Labels and example images"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
@@ -43,7 +44,13 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how many samples are contained in the training set per label.
 
-![alt text][image]
+![alt text][bar_chart_training_set]
+
+The following figure shows one example image for each label in the training set.
+
+![alt text][labels_with_examples]
+
+
 
 ### Design and Test a Model Architecture
 

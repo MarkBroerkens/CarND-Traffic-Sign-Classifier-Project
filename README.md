@@ -1,8 +1,3 @@
----
-title: Traffic Sign Classifier
-layout: post
----
-
 **Abstract**
 
 The goals / steps of this project are the following:

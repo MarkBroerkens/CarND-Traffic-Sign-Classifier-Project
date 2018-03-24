@@ -1,3 +1,17 @@
 theme: jekyll-theme-slate
 title: Traffic Sign Classifier
 description: Submission to the Udacity Self Driving Car Project "Trafic Sign Classifier"
+
+footer-links:
+  email:
+  facebook: https://www.facebook.com/mark.broerkens
+  flickr:
+  github: https://markbroerkens.github.io
+  instagram:
+  linkedin: https://www.linkedin.com/in/markbroerkens/
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  twitter: MarkBroerkens
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: channel/MarkBrörkens
+  googleplus: # anything in your profile username that comes after plus.google.com/

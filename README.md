@@ -1,8 +1,4 @@
-# **Traffic Sign Classifier Project**
-My Submission for the Udacity Traffic Sign Classifier Project
-
-
-**Build a Traffic Sign Recognition Project**
+**Abstract**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)

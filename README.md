@@ -1,6 +1,8 @@
 **Abstract**
 
-The goals / steps of this project are the following:
+This project shows how to classify german traffic signs using a modified LeNet-5 neuronal network. (See e.g. [Yann LeCu - Gradiant-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
+
+The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
@@ -24,7 +26,7 @@ The goals / steps of this project are the following:
 ## Rubric Points
 ### Submitted Files
 
- 1. README that includes all the rubric points and how you addressed each one. You're reading it!
+ 1. [README.md](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb) that includes all the rubric points and how I addressed each one. You're reading it!
  1. The [jupyter notebook](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
  1. [HTML output of the code](Traffic_Sign_Classifier.html)
 
@@ -70,6 +72,8 @@ My final model consisted of the following layers:
 | RELU                   |                                                |
 | Max pooling            | 2x2 stride,  outputs 14x14x6                   |
 | Convolution 5x5        | 1x1 stride, valid padding, outputs 10x10x16    |
+| RELU                   |                                                |
+| Max pooling            | 2x2 stride,  outputs 5x5x16                    |
 | Flatten                | outputs 400                                    |
 | **Dropout**            |                                                |
 | Fully connected        | outputs 120                                    |

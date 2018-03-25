@@ -132,7 +132,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 95.1%
 
-The code for making predictions on my final model is located in the 21th cell of the [Ipython notebook|(https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
+The code for making predictions on my final model is located in the 21th cell of the [Ipython notebook](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
 
 ![alt text][prediction_probabilities_with_barcharts]
 

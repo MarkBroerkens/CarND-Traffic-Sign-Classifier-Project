@@ -57,7 +57,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][grayscale]
 
-Then, I normalized the image using the formular `(pixel - 128)/ 128` which converts the int values of each pixel which range [0,255] to float values with range [-1,1[
+Then, I normalized the image using the formular `(pixel - 128)/ 128` which converts the int values of each pixel which range [0,255] to float values with range [-1,1]
 
 #### 2. Model Architecture
 

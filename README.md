@@ -1,6 +1,6 @@
 **Abstract**
 
-This project shows how to classify german traffic signs using a modified LeNet-5 neuronal network. (See e.g. [Yann LeCu - Gradiant-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
+This project shows how to classify german traffic signs using a modified LeNet neuronal network. (See e.g. [Yann LeCu - Gradiant-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
 
 The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -21,7 +21,7 @@ The steps of this project are the following:
 [learning]: ./figures/learning.png "Validation Accuracy per Epoche"
 [prediction_probabilities_with_examples]: ./figures/prediction_probabilities_with_examples.png "Traffic Sign Prediction with Examples"
 [prediction_probabilities_with_barcharts]: ./figures/prediction_probabilities_with_barcharts.png "Traffic Sign Prediction with Bar Charts"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[model_architecture]: ./figures/model_architecture.png "Architecture of Model"
 
 ## Rubric Points
 ### Submitted Files
@@ -31,6 +31,7 @@ The steps of this project are the following:
  1. [HTML output of the code](Traffic_Sign_Classifier.html)
 
 ### Data Set Summary & Exploration
+#### 1. Dataset Summary
 I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
@@ -40,6 +41,7 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
+#### 2. Exploratory Visualization
 The following figure shows one example image for each label in the training set.
 
 ![alt text][labels_with_examples]
@@ -51,7 +53,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ### Design and Test a Model Architecture
 
-#### 1 Preprocessing
+#### 1. Preprocessing
 
 As a first step, I decided to convert the images to grayscale because several images in the training were pretty dark and contained only little color und the grayscaling reduces the amount of features and thus reduces execution time. Additionally, several research papers have shown good results with grayscaling of the images. [Yann LeCun - Traffic Sign Recognition with Multi-Scale Convolutional Networks](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf)
 
@@ -63,7 +65,7 @@ Then, I normalized the image using the formular `(pixel - 128)/ 128` which conve
 
 #### 2. Model Architecture
 
-My final model consisted of the following layers:
+The model architecture is based on the LeNet. I added dropout layers before each fully connected layer. My final model consisted of the following layers:
 
 | Layer                  |     Description                                |
 |:----------------------:|:----------------------------------------------:|
@@ -85,7 +87,10 @@ My final model consisted of the following layers:
 | Fully connected        | outputs 43                                     |
 | Softmax                |                                                |
 
+![model_architecture](Architecture of the modified LeNet Model
 
+
+#### 3. Model Training
 To train the model, I used an Adam optimizer and the following hyperparameters:
 * batch size: 128
 * number of epochs: 150
@@ -94,19 +99,18 @@ To train the model, I used an Adam optimizer and the following hyperparameters:
 * keep probalbility of the dropout layer: 0.5
 
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
-
 My final model results were:
 * training set accuracy of 99.6%
 * validation set accuracy of 97.5%
 * test set accuracy of 95.1%
 
+#### 4. Solution Approach
 I used an iterative approach for the optimization of validation accuracy:
-1. As an initial model architecture the original LeNet model from the course was chosen. In order to fit the new requirements I adapted the input so that it accepts the colow images from the training set with shape (32,32,3) and modified the number of output so that it fits to the number of unique labels in the training set. The training accuracy was **83.5%** and my pedestrian sign was not correctly classified. (used hyper parameters: EPOCHS=10, BATCH_SIZE=128, learning_rate = 0,001, mu = 0, sigma = 0.1) 
+1. As an initial model architecture the original LeNet model from the course was chosen. In order to tailor the architecture for the traffic sign classifier usecase I adapted the input so that it accepts the colow images from the training set with shape (32,32,3) and I modified the number of outputs so that it fits to the 43 unique labels in the training set. The training accuracy was **83.5%** and my test traffic sign "pedestrians" was not correctly classified. (used hyper parameters: EPOCHS=10, BATCH_SIZE=128, learning_rate = 0,001, mu = 0, sigma = 0.1) 
 
-1. preprocessing grayscale. The validation accuracy increased to **91%** (hyperparameter unmodified)
+1. After adding the grayscaling preprocessing the validation accuracy increased to **91%** (hyperparameter unmodified)
 
-1. additional preprocessing normalization. Minor increase of validation accuracy: **91.8%** (hyperparameter unmodified)
+1. The additional normalization of the training and validation data resulted in a minor increase of validation accuracy: **91.8%** (hyperparameter unmodified)
 
 1. reduced learning rate and increased number of epochs. validation accuracy = **94%** (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
 
@@ -118,18 +122,17 @@ I used an iterative approach for the optimization of validation accuracy:
 
 1. further reduction of learning rate and increase of epochs. validation accuracy = **97,5%** ((EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0005, mu = 0, sigma = 0.1)
 
-![alt text][learning]
-
-Summary
-
+![alt text][Learning]
 
 ### Test a Model on New Images
-
-Here are five German traffic signs that I found on the web:
+#### 1. Acquiring New Images
+Here are some German traffic signs that I found on the web:
 ![alt text][traffic_signs_orig]
 
-The first image might be difficult to classify because ...
+The "right-of-way at the next intersection" sign might be difficult to classify because the triangular shape is similiar to several other signs in the training set (e.g. "Child crossing" or "Slippery Road"). 
+Additionally, the "Stop" sign might be confused with the "No entry" sign because both signs have more ore less round shape and a pretty big red area.
 
+#### 2. Performance on New Images
 Here are the results of the prediction:
 
 ![alt text][traffic_signs_prediction]
@@ -138,6 +141,23 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 21th cell of the [Ipython notebook](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
 
+#### 3. Model Certainty - Softmax Probabilities
+The following images the top five softmax probabilities of the predictions on the captured images are outputted. As shown in the bar chart the softmax predictions for the correct top 1 prediction is bigger than 98%. 
 ![alt text][prediction_probabilities_with_barcharts]
 
+The detailed probabilities and examples of the top five softmax predictions are given in the next image.
 ![alt text][prediction_probabilities_with_examples]
+
+### Possible Future Work
+#### 1. Augmentation of Training Data
+Augmenting the training set might help improve model performance. Common data augmentation techniques include rotation, translation, zoom, flips, inserting jitter, and/or color perturbation. I would use [OpenCV](https://opencv.org) for most of the image processing activities.
+
+#### 2. Analyze the New Image Performance in more detail
+All traffic sign images that I used for testing the predictions worked very well. It would be interesting how the model performs in case there are traffic sign that are less similiar to the traffic signs in the training set. Examples could be traffic signs drawn manually or traffic signs with a label that was not defined in the training set. 
+
+#### 3. Visualization of Layers in the Neural Network
+In Step 4 of the jupyter notebook some further guidance on how the layers of the neural network can be visualized is provided. It would be great to see what the network sees. 
+Additionally it would be interesting to visualize the learning using [TensorBoard](https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard)
+
+#### 4. Further Experiments with TensorFlow
+I would like to investigate how alternative model architectures such as Inception, VGG, AlexNet, ResNet perfom on the given training set. There is a tutorial for the [TensorFlow Slim](https://github.com/tensorflow/models/tree/master/research/slim) library which could be a good start.

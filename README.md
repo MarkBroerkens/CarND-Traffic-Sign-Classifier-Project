@@ -115,6 +115,7 @@ I used an iterative approach for the optimization of validation accuracy:
 1. further reduction of learning rate and increase of epochs. validation accuracy = **97,5%** ((EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0005, mu = 0, sigma = 0.1)
 
 ![alt text][learning]
+![alt text][grayscale]
 
 Summary
 

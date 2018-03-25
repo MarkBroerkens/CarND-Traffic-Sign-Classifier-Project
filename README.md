@@ -14,9 +14,9 @@ The goals / steps of this project are the following:
 [bar_chart_training_set]: ./figures/bar_chart_training_set.png "Distribution of training samples per label"
 [labels_with_examples]: ./figures/labels_with_examples.png "Labels and example images"
 [grayscale]: ./figures/grayscale.jpg "Grayscaling"
-[traffic_signs_orig]: /figures/traffic_signs_orig.png "Traffic Signs"
-[traffic_signs_prediction]: /figures/traffic_signs_prediction.png "Traffic Signs Prediction"
-[learning]: /figures/learning.png "Validation Accuracy per Epoche"
+[traffic_signs_orig]: ./figures/traffic_signs_orig.png "Traffic Signs"
+[traffic_signs_prediction]: ./figures/traffic_signs_prediction.png "Traffic Signs Prediction"
+[learning]: ./figures/learning.png "Validation Accuracy per Epoche"
 [prediction_probabilities_with_examples]: ./figures/prediction_probabilities_with_examples.png "Traffic Sign Prediction with Examples"
 [prediction_probabilities_with_barcharts]: ./figures/prediction_probabilities_with_barcharts.png "Traffic Sign Prediction with Bar Charts"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
@@ -115,7 +115,6 @@ I used an iterative approach for the optimization of validation accuracy:
 1. further reduction of learning rate and increase of epochs. validation accuracy = **97,5%** ((EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0005, mu = 0, sigma = 0.1)
 
 ![alt text][learning]
-![alt text][grayscale]
 
 Summary
 

@@ -98,21 +98,21 @@ My final model results were:
 * test set accuracy of 95.1%
 
 I used an iterative approach for the optimization of validation accuracy:
-1. As an initial model architecture the original LeNet model from the course was chosen. In order to fit the new requirements I adapted the input so that it accepts the colow images from the training set with shape (32,32,3) and modified the number of output so that it fits to the number of unique labels in the training set. The training accuracy was 83.5% and my pedestrian sign was not correctly classified. (used hyper parameters: EPOCHS=10, BATCH_SIZE=128, learning_rate = 0,001, mu = 0, sigma = 0.1) 
+1. As an initial model architecture the original LeNet model from the course was chosen. In order to fit the new requirements I adapted the input so that it accepts the colow images from the training set with shape (32,32,3) and modified the number of output so that it fits to the number of unique labels in the training set. The training accuracy was **83.5%** and my pedestrian sign was not correctly classified. (used hyper parameters: EPOCHS=10, BATCH_SIZE=128, learning_rate = 0,001, mu = 0, sigma = 0.1) 
 
-1. preprocessing grayscale. The validation accuracy increased to 91% (hyperparameter unmodified)
+1. preprocessing grayscale. The validation accuracy increased to **91%** (hyperparameter unmodified)
 
-1. additional preprocessing normalization. Minor increase of validation accuracy: 91.8% (hyperparameter unmodified)
+1. additional preprocessing normalization. Minor increase of validation accuracy: **91.8%** (hyperparameter unmodified)
 
-1. reduced learning rate and increased number of epochs. validation accuracy = 94% (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
+1. reduced learning rate and increased number of epochs. validation accuracy = **94%** (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
 
-1. overfitting. added dropout layer after relu of final fully connected layer: validation accuracy = 0.947 (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
+1. overfitting. added dropout layer after relu of final fully connected layer: validation accuracy = **94,7%** (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
 
 1. still overfitting. added dropout after relu of first fully connected layer. Overfitting reduced but still not good
 
-1. added dropout before validation accuracy = 0.953 validation accuracy = 95,3% ((EPOCHS = 50, BATCH_SIZE = 128, rate = 0,0006, mu = 0, sigma = 0.1)
+1. added dropout before validation accuracy = 0.953 validation accuracy = **95,3%** ((EPOCHS = 50, BATCH_SIZE = 128, rate = 0,0006, mu = 0, sigma = 0.1)
 
-1. further reduction of learning rate and increase of epochs. validation accuracy = 97,5% ((EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0005, mu = 0, sigma = 0.1)
+1. further reduction of learning rate and increase of epochs. validation accuracy = **97,5%** ((EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0005, mu = 0, sigma = 0.1)
 
 ![alt text][learning]
 

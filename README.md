@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 
 [bar_chart_training_set]: ./figures/bar_chart_training_set.png "Distribution of training samples per label"
 [labels_with_examples]: ./figures/labels_with_examples.png "Labels and example images"
-[grayscale: ./figures/grayscale.jpg "Grayscaling"
+[grayscale]: ./figures/grayscale.jpg "Grayscaling"
 [traffic_signs_orig]: /figures/traffic_signs_orig.png "Traffic Signs"
 [traffic_signs_prediction]: /figures/traffic_signs_prediction.png "Traffic Signs Prediction"
 [learning]: /figures/learning.png "Validation Accuracy per Epoche"
@@ -134,5 +134,6 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 21th cell of the [Ipython notebook|(https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
 
-!(Alt Text)[prediction_probabilities_with_barcharts]
-!(Alt Text)[prediction_probabilities_with_examples]
+![alt text][prediction_probabilities_with_barcharts]
+
+![alt text][prediction_probabilities_with_examples]

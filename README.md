@@ -78,7 +78,7 @@ My final model consisted of the following layers:
 | Fully connected        | outputs 84                                     |
 | RELU                   |                                                |
 | **Dropout**            |                                                |
-| Fully connected        | outputs 53                                     |
+| Fully connected        | outputs 43                                     |
 | Softmax                |                                                |
 
 

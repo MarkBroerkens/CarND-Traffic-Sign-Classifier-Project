@@ -88,7 +88,7 @@ The model architecture is based on the LeNet model architecture. I added dropout
 | Fully connected        | outputs 43                                     |
 | Softmax                |                                                |
 
-![model_architecture][Architecture of the modified LeNet Model]
+![alt text][model_architecture]
 
 
 #### 3. Model Training

@@ -1,6 +1,7 @@
 **Abstract**
 
-This project shows how to classify german traffic signs using a modified LeNet neuronal network. (See e.g. [Yann LeCu - Gradiant-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
+This project shows how to classify german traffic signs using a modified LeNet neuronal network. 
+(See e.g. [Yann LeCu - Gradiant-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf))
 
 The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -27,7 +28,7 @@ The steps of this project are the following:
 ### Submitted Files
 
  1. [README.md](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb) that includes all the rubric points and how I addressed each one. You're reading it!
- 1. The [jupyter notebook](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
+ 1. The [jupyter notebook](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
  1. [HTML output of the code](Traffic_Sign_Classifier.html)
 
 ### Data Set Summary & Exploration
@@ -61,14 +62,14 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][grayscale]
 
-Then, I normalized the image using the formular `(pixel - 128)/ 128` which converts the int values of each pixel which range [0,255] to float values with range [-1,1]
+Then, I normalized the image using the formular `(pixel - 128)/ 128` which converts the int values of each pixel [0,255] to float values with range [-1,1]
 
 #### 2. Model Architecture
 
-The model architecture is based on the LeNet. I added dropout layers before each fully connected layer. My final model consisted of the following layers:
+The model architecture is based on the LeNet model architecture. I added dropout layers before each fully connected layer in order to prevent overfitting. My final model consisted of the following layers:
 
 | Layer                  |     Description                                |
-|:----------------------:|:----------------------------------------------:|
+|------------------------|------------------------------------------------|
 | Input                  | 32x32x1 gray scale image                       |
 | Convolution 5x5        | 1x1 stride, valid padding, outputs 28x28x6     |
 | RELU                   |                                                |
@@ -87,14 +88,14 @@ The model architecture is based on the LeNet. I added dropout layers before each
 | Fully connected        | outputs 43                                     |
 | Softmax                |                                                |
 
-![model_architecture](Architecture of the modified LeNet Model
+![model_architecture][Architecture of the modified LeNet Model]
 
 
 #### 3. Model Training
 To train the model, I used an Adam optimizer and the following hyperparameters:
 * batch size: 128
 * number of epochs: 150
-* learning rate: 0.0005
+* learning rate: 0.0006
 * Variables were initialized using the truncated normal distribution with mu = 0.0 and sigma = 0.1
 * keep probalbility of the dropout layer: 0.5
 
@@ -106,21 +107,27 @@ My final model results were:
 
 #### 4. Solution Approach
 I used an iterative approach for the optimization of validation accuracy:
-1. As an initial model architecture the original LeNet model from the course was chosen. In order to tailor the architecture for the traffic sign classifier usecase I adapted the input so that it accepts the colow images from the training set with shape (32,32,3) and I modified the number of outputs so that it fits to the 43 unique labels in the training set. The training accuracy was **83.5%** and my test traffic sign "pedestrians" was not correctly classified. (used hyper parameters: EPOCHS=10, BATCH_SIZE=128, learning_rate = 0,001, mu = 0, sigma = 0.1) 
+1. As an initial model architecture the original LeNet model from the course was chosen. In order to tailor the architecture for the traffic sign classifier usecase I adapted the input so that it accepts the colow images from the training set with shape (32,32,3) and I modified the number of outputs so that it fits to the 43 unique labels in the training set. The training accuracy was **83.5%** and my test traffic sign "pedestrians" was not correctly classified. 
+  (used hyper parameters: EPOCHS=10, BATCH_SIZE=128, learning_rate = 0,001, mu = 0, sigma = 0.1) 
 
-1. After adding the grayscaling preprocessing the validation accuracy increased to **91%** (hyperparameter unmodified)
+1. After adding the grayscaling preprocessing the validation accuracy increased to **91%** 
+   (hyperparameter unmodified)
 
 1. The additional normalization of the training and validation data resulted in a minor increase of validation accuracy: **91.8%** (hyperparameter unmodified)
 
-1. reduced learning rate and increased number of epochs. validation accuracy = **94%** (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
+1. reduced learning rate and increased number of epochs. validation accuracy = **94%** 
+   (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
 
-1. overfitting. added dropout layer after relu of final fully connected layer: validation accuracy = **94,7%** (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
+1. overfitting. added dropout layer after relu of final fully connected layer: validation accuracy = **94,7%** 
+   (EPOCHS = 30, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
 
 1. still overfitting. added dropout after relu of first fully connected layer. Overfitting reduced but still not good
 
-1. added dropout before validation accuracy = 0.953 validation accuracy = **95,3%** ((EPOCHS = 50, BATCH_SIZE = 128, rate = 0,0006, mu = 0, sigma = 0.1)
+1. added dropout before validation accuracy = 0.953 validation accuracy = **95,3%** 
+   (EPOCHS = 50, BATCH_SIZE = 128, rate = 0,0007, mu = 0, sigma = 0.1)
 
-1. further reduction of learning rate and increase of epochs. validation accuracy = **97,5%** ((EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0005, mu = 0, sigma = 0.1)
+1. further reduction of learning rate and increase of epochs. validation accuracy = **97,5%** 
+   (EPOCHS = 150, BATCH_SIZE = 128, rate = 0,0006, mu = 0, sigma = 0.1)
 
 ![alt text][Learning]
 
@@ -139,10 +146,10 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 95.1%
 
-The code for making predictions on my final model is located in the 21th cell of the [Ipython notebook](https://github.com/MarkBroerkens/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
+The code for making predictions on my final model is located in the 21th cell of the [jupyter notebook](Traffic_Sign_Classifier.html).
 
 #### 3. Model Certainty - Softmax Probabilities
-The following images the top five softmax probabilities of the predictions on the captured images are outputted. As shown in the bar chart the softmax predictions for the correct top 1 prediction is bigger than 98%. 
+In the following images the top five softmax probabilities of the predictions on the captured images are outputted. As shown in the bar chart the softmax predictions for the correct top 1 prediction is bigger than 98%. 
 ![alt text][prediction_probabilities_with_barcharts]
 
 The detailed probabilities and examples of the top five softmax predictions are given in the next image.

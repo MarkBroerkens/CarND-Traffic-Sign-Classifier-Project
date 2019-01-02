@@ -183,4 +183,4 @@ I would like to investigate how alternative model architectures such as Inceptio
 * [Optimizing Gradient Descent](http://sebastianruder.com/optimizing-gradient-descent/index.html#adam)
 
 #### Dropouts
-* [Analysis of Dropout](https://pgaleone.eu/deep-learning/regularization/2017/01/10/anaysis-of-dropout/)
+* [Analysis of Dropout](https://pgaleone.eu/deep-learning/regularization/2017/01/10/anaysis-of-dropout)

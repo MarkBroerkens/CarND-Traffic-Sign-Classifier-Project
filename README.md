@@ -168,3 +168,19 @@ Additionally it would be interesting to visualize the learning using [TensorBoar
 
 #### 4. Further Experiments with TensorFlow
 I would like to investigate how alternative model architectures such as Inception, VGG, AlexNet, ResNet perfom on the given training set. There is a tutorial for the [TensorFlow Slim](https://github.com/tensorflow/models/tree/master/research/slim) library which could be a good start.
+
+### Additional Reading
+#### Extra Important Material
+* [Fast AI](http://www.fast.ai/)
+* [A Guide To Deep Learning](http://yerevann.com/a-guide-to-deep-learning/)
+* [Dealing with unbalanced data](https://medium.com/@vivek.yadav/dealing-with-unbalanced-data-generating-additional-data-by-jittering-the-original-image-7497fe2119c3#.obfuq3zde)
+* [Improved Performance of Deep Learning On Traffic Sign Classification](https://medium.com/@vivek.yadav/improved-performance-of-deep-learning-neural-network-models-on-traffic-sign-classification-using-6355346da2dc#.tq0uk9oxy)
+
+#### Batch size discussion
+* [How Large Should the Batch Size be](http://stats.stackexchange.com/questions/140811/how-large-should-the-batch-size-be-for-stochastic-gradient-descent)
+
+#### Adam optimizer discussion
+* [Optimizing Gradient Descent](http://sebastianruder.com/optimizing-gradient-descent/index.html#adam)
+
+#### Dropouts
+* [Analysis of Dropout](https://pgaleone.eu/deep-learning/regularization/2017/01/10/anaysis-of-dropout/)
